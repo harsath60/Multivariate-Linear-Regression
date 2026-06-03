@@ -6,23 +6,33 @@ To write a python program to implement multivariate linear regression and predic
 2.	Anaconda – Python 3.7 Installation / Moodle-Code Runner
 ## Algorithm:
 ### Step1
-<br>
+Import Libraries and Load Dataset Import the required Python libraries and load the California Housing dataset.
+
+
 
 ### Step2
-<br>
+Define Input and Output Variables Store the feature matrix in X and target values in y.
 
 ### Step3
-<br>
+Split the Dataset Divide the dataset into training and testing sets using train_test_split().
 
 ### Step4
-<br>
+Create and Train the Linear Regression Model Create a Linear Regression object and train it using the training data.
 
 ### Step5
-<br>
-
+Predict and Plot Residual Errors Predict the output values, calculate residual errors, and display the residual error graph using Matplotlib.
 ## Program:
 ```
-
+import pandas as pd
+from sklearn import linear_model
+df=pd.read_csv("car (1).csv")
+x=df[["Volume","Weight"]]
+y=df["CO2"]
+regression=linear_model.LinearRegression()
+regression.fit(x,y)
+print(regression.coef_)
+print(regression.intercept_)
+print(regression.predict([[3300,1300]]))
 
 
 
@@ -31,9 +41,7 @@ To write a python program to implement multivariate linear regression and predic
 ```
 ## Output:
 
-### Insert your output
-
-<br>
+<img width="1357" height="315" alt="image" src="https://github.com/user-attachments/assets/9966b5d8-733a-45b9-91e8-c5bdf2101c51" />
 
 ## Result
 Thus the multivariate linear regression is implemented and predicted the output using python program.
